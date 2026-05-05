@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todocard">   
+        <div class="titulo"> 
+            <h2>Busca de Pokémon</h2>
+            <input type="text" id="campoBusca" placeholder="Digite o nome do Pokémon...">
+            <button id="btnBuscar">Pesquisar</button>
+        </div> <!-- Fechamento da div titulo corrigido -->
+
+        <div id="resultado" class="escondido"> <!-- 'resultado' minúsculo para bater com JS -->
+            <img id="pokeImg" src="" alt="imagem do pokemon"> <!-- 'pokeImg' corrigido -->
+            <h3 id="pokeNome"></h3>
+            <p><strong>ID:</strong> <span id="pokeID"></span></p>
+            <p><strong>Altura:</strong> <span id="pokeAltura"></span></p>
+            <p><strong>Peso:</strong> <span id="pokePeso"></span></p>
+            <p><strong>Tipo:</strong> <span id="pokeTipo"></span></p>
+        </div>
+
+        <div id="msgErro" class="escondido">
+            Pokémon não encontrado, tente de novo.
+        </div>
+    </div>
+    
+    <!-- Script movido para o final do body -->
+    <script src="script.js"></script>
+</body>
+</html>

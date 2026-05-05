@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif; /* Corrigido de font-size para font-family */
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.todocard { 
+    width: 350px; /* Melhor usar largura fixa ou min-width em vez de % para cards */
+    padding: 30px;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Corrigido o valor do RGBA */
+}
+
+input {
+    width: 60%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 6px;
+    transition: background 0.3s; /* Suaviza a mudança de cor */
+}
+
+button:hover {
+    background-color: #b02a37;
+}
+
+img {
+    width: 150px; /* Ajustado para não achatar a imagem */
+    height: auto; /* Mantém a proporção do Pokémon */
+    margin-top: 15px;
+}
+
+#msgErro {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 16px;
+    color: #856404;
+}
+
+.escondido {
+    display: none !important; /* Garante que o elemento suma mesmo com conflitos */
+}
