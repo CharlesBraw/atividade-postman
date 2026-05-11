@@ -1,10 +1,10 @@
 const campoBusca = document.getElementById('campoBusca');
-const btnBuscar = document.getElementById('btnBuscar'); // Nome da variável alinhado
+const btnBuscar = document.getElementById('btnBuscar'); 
 const resultado = document.getElementById('resultado');
 const msgErro = document.getElementById('msgErro');
 
 async function buscarPokemon() {
-    const nome = campoBusca.value.toLowerCase().trim(); // Corrigido 'none' e 'campoBuscar'
+    const nome = campoBusca.value.toLowerCase().trim(); 
 
     if (nome === '') {
         alert('Digite o nome de um Pokémon!');
@@ -16,16 +16,14 @@ async function buscarPokemon() {
 
         if (!resposta.ok) throw new Error('Pokémon não encontrado');
 
-        const dados = await resposta.json();
-
-        // Preenchimento dos dados
+     
         document.getElementById('pokeNome').textContent = dados.name;
         document.getElementById('pokeID').textContent = dados.id;
         document.getElementById('pokeAltura').textContent = dados.height;
         document.getElementById('pokePeso').textContent = dados.weight;
         document.getElementById('pokeTipo').textContent = dados.types[0].type.name;
         
-        // Corrigido para .src para exibir a imagem
+    
         document.getElementById('pokeImg').src = dados.sprites.front_default;
 
         resultado.classList.remove('escondido');
@@ -37,9 +35,12 @@ async function buscarPokemon() {
     }
 }
 
-// Corrigido: 'addEventListener' com L maiúsculo
+
 btnBuscar.addEventListener('click', buscarPokemon);
 
 campoBusca.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') buscarPokemon();
 });
+    const dados = await resposta.json();
+
+    
